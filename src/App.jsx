@@ -9,14 +9,15 @@ import { getFireAuth } from "./config/firebase.js";
 import { setUserSignInState } from "./Screens/AuthScreen/redux/AuthSlice.jsx";
 
 function App() {
+
   const dispatch = useDispatch();
   useEffect(() => {
     getFireAuth.onAuthStateChanged((user) => {
       if (user !== null) {
-        const { displayName, email, phoneNumber, uid } = user;
+        const { displayName, email, phoneNumber, uid ,photoURL} = user;
         dispatch(
           setUserSignInState({
-            user: { displayName, email, phoneNumber, uid },
+            user: { displayName, email, phoneNumber,photoURL, uid },
             isAuthenticated: true,
           })
         );
@@ -31,10 +32,10 @@ function App() {
     });
     getFireAuth.onIdTokenChanged(async(user)=>{
       if (user !== null) {
-        const { displayName, email, phoneNumber, uid } = user;
+        const { displayName, email,photoURL, phoneNumber, uid } = user;
         dispatch(
           setUserSignInState({
-            user: { displayName, email, phoneNumber, uid },
+            user: { displayName, email,photoURL, phoneNumber, uid },
             isAuthenticated: true,
           })
         );
@@ -48,6 +49,7 @@ function App() {
       }
     })
   }, []);
+  
   return (
    
       <RouterProvider router={router} />
