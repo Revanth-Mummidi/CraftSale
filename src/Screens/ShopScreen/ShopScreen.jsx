@@ -50,7 +50,7 @@ function ShopScreen() {
 function SuggestionBlock({ Title, Suggestions }) {
   const [isExpand, SetExpand] = useState(false);
   return (
-    <div className="flex flex-col justify-center items-start gap-2">
+    <div className="flex flex-col justify-center z-10 items-start gap-2">
       <p className="font-semibold self-start text-[#6C7275] text-[16px]">
         {Title}
       </p>

@@ -12,6 +12,7 @@ import ProfileOrders from "./Screens/ProfileScreen/components/ProfileOrders.jsx"
 import ProfileWishList from "./Screens/ProfileScreen/components/ProfileWishList.jsx";
 import ProfileLogout from "./Screens/ProfileScreen/components/ProfileLogout.jsx";
 import ShopScreen from "./Screens/ShopScreen/ShopScreen.jsx";
+import ProductScreen from "./Screens/ProductScreen/ProductScreen.jsx";
 
 export const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ export const router = createBrowserRouter([
       {
         path:"shop",
         element:<ShopScreen/>
+      },
+      {
+        path:"product",
+        element:<ProductScreen/>
       }
     ]
   },

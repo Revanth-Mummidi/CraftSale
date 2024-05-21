@@ -6,13 +6,15 @@ import { AccountFooter, AppHeader } from '../ProfileScreen/ProfileLayout';
 function HomeScreen() {
     const location = useLocation();
   return (
+    <>
+        <AppHeader/>
     <div className='container mx-auto'>
         {/* <Link to={`/auth/login?next=${location.pathname}`}>Login</Link> */}
-        <AppHeader/>
         {/* <HomeNavBar/> */}
         <Outlet/>
-        <AccountFooter/>
     </div>
+        <AccountFooter/>
+    </>
   )
 }
 

@@ -82,7 +82,7 @@ function ContentCard(){
 }
 function Card({data}){
   return(
-    <div className="flex flex-col gap-2 w-[357px] mx-auto">
+    <div className="flex flex-col gap-2 w-[250px] lg:w-[357px] mx-auto">
       <img src={data.pic} className="h-[325px]"></img>
       <p className="font-medium text-[20px] text-[#23262F] leading-[28px]">{data.title}</p>
       <p className="text-[#6C7275] text-[12px] ">{data.date}</p>
