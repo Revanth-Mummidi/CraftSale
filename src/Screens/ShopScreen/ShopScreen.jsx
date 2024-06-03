@@ -66,7 +66,7 @@ function SuggestionBlock({ Title, Suggestions }) {
           <div className=" absolute z-10 left-0 top-14 h-[150px] overflow-y-auto flex flex-col bg-white   gap-5 w-[262px] p-5">
             {Suggestions.map((data, index) => {
               return (
-                <p className="text-[#6C7275] text-[16px] font-normal">{data}</p>
+                <p key={index} className="text-[#6C7275] text-[16px] font-normal">{data}</p>
               );
             })}
           </div>

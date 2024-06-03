@@ -52,7 +52,7 @@ function ProfileWishList() {
                 {
                     wishlist.map((item,index)=>{
                         return(
-                            <tr className='border-b-2  border-slate-300  text-gray-700 '>
+                            <tr key={index} className='border-b-2  border-slate-300  text-gray-700 '>
                                 <td className='p-4 ' >
                                    <div className='flex flex-row  gap-2  items-center'>
                                         <IoClose className='text-lg' />

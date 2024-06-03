@@ -13,6 +13,7 @@ import ProfileWishList from "./Screens/ProfileScreen/components/ProfileWishList.
 import ProfileLogout from "./Screens/ProfileScreen/components/ProfileLogout.jsx";
 import ShopScreen from "./Screens/ShopScreen/ShopScreen.jsx";
 import ProductScreen from "./Screens/ProductScreen/ProductScreen.jsx";
+import ContactScreen from "./Screens/ContactScreen/ContactScreen.jsx";
 
 export const router = createBrowserRouter([
   {
@@ -32,6 +33,10 @@ export const router = createBrowserRouter([
       {
         path:"product",
         element:<ProductScreen/>
+      },
+      {
+        path:"contact",
+        element:<ContactScreen/>
       }
     ]
   },

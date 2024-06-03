@@ -134,13 +134,13 @@ function ProductScreen() {
                     <p>{"1"}</p>
                     <p>{"+"}</p>
                 </div>
-                <div className="w-[357px] h-[52px] px-[40px] py-[10px] border-[1px] flex items-center justify-center rounded-[8px] border-black ">
+                <div className="w-[357px] cursor-pointer h-[52px] px-[40px] py-[10px] border-[1px] flex items-center justify-center rounded-[8px] border-black ">
                     <p>{"❤️ "}Whishlist</p>
 
                 </div>
             </div>
             <div className="bg-black w-[508px] items-center justify-center rounded-lg flex ">
-                    <p className="text-white font-medium text-[18px]  px-[40px] py-[10px]">Add to Cart</p>
+                    <p className="text-white cursor-pointer font-medium text-[18px]  px-[40px] py-[10px]">Add to Cart</p>
             </div>
             </div>
          
