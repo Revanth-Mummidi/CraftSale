@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Blog from "../../assets/shop.jpeg";
 import DownMark from "../../assets/Shape.svg";
 import Star from "../../assets/Star Fill.svg";
+import Sofa from "../../assets/Sofa.jpeg";
+
 function ShopScreen() {
   return (
     <div className="flex flex-1  flex-col items-center  ">
@@ -266,7 +268,7 @@ function Card({ data }) {
         <p className="bg-[#38CB89] text-[16px] text-[#FEFEFE] font-bold rounded-[4px] px-[14px] py-[4px]">{"-"+data.discount}</p>
       </div>
       </div>
-      <img src={data.pic} className="object-contain object-center"></img>
+      <img src={Sofa} className="object-contain object-center"></img>
     </div>
       
       <div className="flex  flex-row gap-2">
