@@ -12,7 +12,7 @@ function MapComponent() {
   const renderMarkers = () => {
     return locations.map((location, index) => (
       <div key={index} lat={location.lat} lng={location.lng}>
-        <div className="bg-red-500 rounded-full w-6 h-6 text-white text-center">{location.name}</div>
+        <div className="bg-black-500 rounded-full w-6 h-6 text-white text-center">{location.name}</div>
       </div>
     ));
   };
