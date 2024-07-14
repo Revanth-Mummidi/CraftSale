@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Chair from "../../assets/Chair.svg";
 import Star from "../../assets/Star Fill.svg";
 
@@ -22,6 +22,7 @@ function ProductScreen() {
         unit:"Seconds"
       },
   ]
+   const [count,setCount]=useState(0);
   return (
     <div className="flex flex-1 w-full p-10 overflow-x-auto flex-col gap-5 ">
       <div className="flex gap-2 text-[14px] font-medium flex-row my-5">
@@ -130,16 +131,22 @@ function ProductScreen() {
 
             <div className="flex flex-row gap-4">
                 <div className="bg-[#F5F5F5] w-[127px] h-[52px] flex flex-row items-center justify-between rounded-[8px] px-[16px] py-[12px]">
-                    <p>{"-"}</p>
-                    <p>{"1"}</p>
-                    <p>{"+"}</p>
+                    <p className="cursor-pointer" onClick={()=>{
+                      if(count!=0)
+                      setCount(count-1);
+                    }}>{"-"}</p>
+                    <p>{count}</p>
+                    <p className="cursor-pointer" onClick={()=>{
+                      if(count!=5)
+                      setCount(count+1)
+                    }}>{"+"}</p>
                 </div>
-                <div className="w-[357px] cursor-pointer h-[52px] px-[40px] py-[10px] border-[1px] flex items-center justify-center rounded-[8px] border-black ">
-                    <p>{"❤️ "}Whishlist</p>
+                <div className="w-[357px] cursor-pointer hover:bg-slate-300 h-[52px] px-[40px] py-[10px] border-[1px] flex items-center justify-center rounded-[8px] border-black ">
+                    <p>{"❤️ "}Wishlist</p>
 
                 </div>
             </div>
-            <div className="bg-black w-[508px] items-center justify-center rounded-lg flex ">
+            <div className="bg-black w-[508px] cursor-pointer hover:bg-slate-900 items-center justify-center rounded-lg flex ">
                     <p className="text-white cursor-pointer font-medium text-[18px]  px-[40px] py-[10px]">Add to Cart</p>
             </div>
             </div>
